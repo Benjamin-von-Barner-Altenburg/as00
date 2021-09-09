@@ -2,11 +2,13 @@
 
 namespace Lecture01  
 {  
-    class Program   
+    public class Program   
     {  
        public static bool isLeap = false; 
+
         public static void Main(string[] args)  
         {  
+           try{ 
             Console.WriteLine("Enter Year : ");  
             int Year = int.Parse(Console.ReadLine());
 
@@ -16,7 +18,11 @@ namespace Lecture01
                 if (isLeap ==true) Console.WriteLine("{0} is a Leap Year.", Year);  
                 else Console.WriteLine("{0} is not a Leap Year.", Year);  
             }
+           }catch(System.FormatException){
+               Console.WriteLine("Only intengers are allowed!");
+           }
         }  
+
         public static bool IsLeapYear(int year){
            if (year>=1582 && (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))) return isLeap = true;   
             else return isLeap = false;   

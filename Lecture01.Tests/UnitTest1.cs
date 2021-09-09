@@ -8,6 +8,7 @@ namespace Lecture01.Tests
         [Fact]
         public void Test1()
         {
+
             Program.IsLeapYear(1200).Equals("It is not possible to calculate leap years earlier that 1582. Please select another Year");
 
             Program.IsLeapYear(1581).Equals("It is not possible to calculate leap years earlier that 1582. Please select another Year");
@@ -29,6 +30,8 @@ namespace Lecture01.Tests
             Program.IsLeapYear(2001).Equals(false);
 
             Program.IsLeapYear(2013).Equals(false);
+
+
 
         }
     }
